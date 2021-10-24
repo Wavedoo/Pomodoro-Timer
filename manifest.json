@@ -1,9 +1,9 @@
 {
     "name": "Pomodoro Timer",
     "description": "A timer for usign the pomodoro technique for productivity.",
-    "version": "1.0",
+    "version": "0.2",
     "manifest_version": 3,
-    "permissions": ["scripting", "notifications", "background"],
+    "permissions": ["scripting", "notifications", "background", "alarms"],
     "action":{
         "default_popup": "popup.html"
     },
