@@ -27,7 +27,7 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
                 message: "Great job studying!"
             }
         );
-        chrome.alarms.create("OnBreak", {delayInMinutes: 1});
+        chrome.alarms.create("OnBreak", {delayInMinutes: 5});
     }else if(alarm.name == "OnBreak"){
         chrome.alarms.clearAll();
         state = states.STUDYING;
@@ -40,12 +40,12 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
                 message: "Let's get back to work!"
             }
         );
-        chrome.alarms.create("Studying", {delayInMinutes: 2});
+        chrome.alarms.create("Studying", {delayInMinutes: 25});
     }
 });
 
 function clickedButton() {
-    chrome.alarms.create("Studying", {delayInMinutes: 2});
+    chrome.alarms.create("Studying", {delayInMinutes: 25});
     state = states.STUDYING;
 }
 
